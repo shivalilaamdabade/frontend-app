@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-// Use environment variable for API base URL, fallback to localhost for development
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000/api';
-// const API_BASE_URL = 'https://backend-app-c2if.onrender.com/api'; // Production backend URL - verified working
+// Use environment variable for API base URL, fallback to deployed backend
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://backend-app-c2if.onrender.com/api';
+// const API_BASE_URL = 'http://localhost:3000/api'; // Local development backend
 
 // Create axios instance with default config
 const api = axios.create({
