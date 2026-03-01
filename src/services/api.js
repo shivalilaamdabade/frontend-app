@@ -17,6 +17,12 @@ const api = axios.create({
 // Request interceptor
 api.interceptors.request.use(
   (config) => {
+    console.log('=== API REQUEST DEBUG ===');
+    console.log('Request URL:', config.baseURL + config.url);
+    console.log('Request Method:', config.method);
+    console.log('Request Data:', config.data);
+    console.log('Request Headers:', config.headers);
+    console.log('=== END REQUEST DEBUG ===');
     return config;
   },
   (error) => {
